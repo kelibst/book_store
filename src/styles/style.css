@@ -117,8 +117,6 @@ li.nav-li {
 
 a {
   text-decoration: none;
-
-  /* font-size: 18px; */
 }
 
 a:hover {
@@ -152,11 +150,6 @@ div#time {
   font-family: sans-serif;
   font-weight: bold;
 }
-
-/* #form {
-    display: none;
-  } */
-
 .d-none {
   display: none !important;
 }
