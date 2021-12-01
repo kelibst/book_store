@@ -3,21 +3,21 @@ const addButton = document.querySelector('.add-btn');
 const bookList = document.querySelector('.books-ul');
 const storage = window.localStorage;
 
-const  Book = (name, title) => {
+const Book = (name, title) => {
   this.name = name;
   this.title = title;
-}
+};
 
-const  addBook = () => {
+const addBook = () => {
   const bookName = document.querySelector('.bookname').value;
   const bookTitle = document.querySelector('.author').value;
 
   const book = new Book(bookName, bookTitle);
   books.push(book);
   storage.setItem('books', JSON.stringify(books));
-}
+};
 
-const  showBooks = () => {
+const showBooks = () => {
   let book = '';
   if (books.length === 0) {
     bookList.innerHTML = '<p>Sorry you have no book left. Kindly add some</p>';
@@ -30,7 +30,7 @@ const  showBooks = () => {
       bookList.innerHTML = book;
     });
   }
-}
+};
 bookList.addEventListener('click', (e) => {
   if (e.target.classList.contains('rmv')) {
     books = books.filter(
