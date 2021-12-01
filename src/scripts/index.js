@@ -47,7 +47,9 @@ class BookHandler {
 
   loadBooks = () => {
     const storedBooks = JSON.parse(localStorage.getItem('books'));
-    this.books = [...storedBooks];
+    if (storedBooks.length) {
+      this.books = [...storedBooks];
+    }
   };
 }
 
